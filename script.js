@@ -5,9 +5,9 @@ menuBtn.addEventListener("click", function () {
   menu.classList.toggle("active");
 });
 
-const menuLinks = menu.querySelectorAll("a");
+const links = menu.querySelectorAll("a");
 
-menuLinks.forEach(function (link) {
+links.forEach(function (link) {
   link.addEventListener("click", function () {
     menu.classList.remove("active");
   });
