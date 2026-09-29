@@ -4,10 +4,6 @@
   box-sizing: border-box;
 }
 
-html {
-  scroll-behavior: smooth;
-}
-
 body {
   font-family: Arial, sans-serif;
   background: #111;
@@ -35,7 +31,7 @@ header {
   font-weight: bold;
 }
 
-/* DESKTOP MENU */
+/* MENU */
 nav {
   display: flex;
   gap: 25px;
@@ -77,8 +73,8 @@ nav a {
 
   background:
     linear-gradient(
-      rgba(0,0,0,0.7),
-      rgba(0,0,0,0.8)
+      rgba(0,0,0,.7),
+      rgba(0,0,0,.8)
     ),
     url("https://images.unsplash.com/photo-1621605815971-fbc98d665033?auto=format&fit=crop&w=1200&q=80");
 
@@ -93,7 +89,58 @@ nav a {
 
 .hero p {
   font-size: 20px;
+}
+
+/* OTHER PAGES */
+.page {
+  max-width: 900px;
+  min-height: 80vh;
+
+  margin: auto;
+
+  padding: 80px 20px;
+
+  text-align: center;
+}
+
+.page h1 {
+  color: #d4af37;
+  font-size: 40px;
   margin-bottom: 30px;
+}
+
+.page p {
+  line-height: 1.8;
+  margin-bottom: 15px;
+}
+
+/* SERVICES */
+.services {
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, 1fr);
+
+  gap: 20px;
+
+  margin-top: 30px;
+}
+
+.service {
+  background: #222;
+
+  padding: 30px;
+
+  border-radius: 10px;
+}
+
+.service h2 {
+  margin-bottom: 15px;
+}
+
+.service p {
+  color: #d4af37;
+  font-weight: bold;
 }
 
 /* BUTTON */
@@ -101,6 +148,7 @@ nav a {
   display: inline-block;
 
   background: #d4af37;
+
   color: #000;
 
   padding: 14px 25px;
@@ -112,57 +160,51 @@ nav a {
   font-weight: bold;
 }
 
-/* SECTIONS */
-section {
-  padding: 70px 20px;
-  text-align: center;
+
+/* MOBILE */
+@media (max-width: 768px) {
+
+  /* SHOW THREE BARS */
+  .menu-btn {
+    display: block;
+  }
+
+  /* HIDE MENU */
+  nav {
+    display: none;
+
+    position: absolute;
+
+    top: 70px;
+    left: 0;
+
+    width: 100%;
+
+    background: #050505;
+
+    flex-direction: column;
+
+    gap: 0;
+
+    text-align: center;
+  }
+
+  /* OPEN MENU */
+  nav.active {
+    display: flex;
+  }
+
+  nav a {
+    padding: 18px;
+
+    border-bottom: 1px solid #333;
+  }
+
+  .hero h1 {
+    font-size: 32px;
+  }
+
+  .services {
+    grid-template-columns: 1fr;
+  }
 }
-
-section h2 {
-  color: #d4af37;
-  font-size: 35px;
-  margin-bottom: 25px;
-}
-
-section p {
-  max-width: 700px;
-  margin: 0 auto;
-  line-height: 1.7;
-}
-
-/* SERVICES */
-.services {
-  max-width: 1000px;
-
-  margin: 30px auto;
-
-  display: grid;
-
-  grid-template-columns:
-    repeat(4, 1fr);
-
-  gap: 20px;
-}
-
-.service {
-  background: #222;
-
-  padding: 30px 15px;
-
-  border-radius: 10px;
-}
-
-.service h3 {
-  margin-bottom: 15px;
-}
-
-.service p {
-  color: #d4af37;
-  font-weight: bold;
-}
-
-/* FOOTER */
-footer {
-  background: #050505;
-
- 
